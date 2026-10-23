@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quick Video Saver · Start here</title>
+<style>
+  :root { --bg:#FAF9F5; --card:#fff; --text:#141413; --muted:#5C5A52; --line:#E1DED0; --accent:#BC5634; --soft:#F8EAE2; --ok:#4C6E36; --warn:#8A5A0B; color-scheme: light dark;
+    font: 16px/1.6 "Google Sans","Segoe UI Variable Text","Segoe UI",system-ui,sans-serif; color: var(--text); }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1F1E1D; --card:#2A2927; --text:#FAF9F5; --muted:#C3C0B4; --line:#45423D; --accent:#D97757; --soft:#3B2A22; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); }
+  main { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; gap: 16px; align-items: center; margin-bottom: 28px; }
+  header svg { flex: none; }
+  h1 { margin: 0; font-size: 30px; letter-spacing: -.5px; }
+  .lead { color: var(--muted); margin: 2px 0 0; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; margin: 0 0 18px; }
+  h2 { margin: 0 0 12px; font-size: 20px; display: flex; align-items: center; gap: 10px; }
+  h2 .n { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: #fff; font-size: 15px; font-weight: 700; }
+  ol, ul { padding-left: 22px; margin: 8px 0; } li { margin: 7px 0; }
+  code, kbd { background: var(--soft); border-radius: 6px; padding: 1px 7px; font: 14px/1.5 "Cascadia Mono",Consolas,monospace; }
+  kbd { border: 1px solid var(--line); }
+  .tip { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin: 14px 0 0; }
+  details { border-top: 1px solid var(--line); padding: 10px 0; } details:first-of-type { border-top: 0; }
+  summary { cursor: pointer; font-weight: 650; } details p { margin: 8px 0 4px; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 8px; }
+  .grid div { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .grid b { display: block; margin-bottom: 4px; }
+  .muted { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="60" height="60" aria-hidden="true"><defs><linearGradient id="qvs-tile" x1="12" y1="4" x2="116" y2="126" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3FD9EC"/><stop offset="0.5" stop-color="#1A8FA0"/><stop offset="1" stop-color="#0A3F4B"/></linearGradient><linearGradient id="qvs-gloss" x1="0" y1="4" x2="0" y2="70" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.34"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient><filter id="qvs-lift" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="3.2" flood-color="#021F26" flood-opacity="0.42"/></filter></defs><rect x="4" y="4" width="120" height="120" rx="30" fill="url(#qvs-tile)"/><rect x="4" y="4" width="120" height="120" rx="30" fill="url(#qvs-gloss)"/><rect x="5" y="5" width="118" height="118" rx="29" fill="none" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="2"/><g filter="url(#qvs-lift)"><rect x="53" y="19" width="22" height="46" rx="8" fill="#FFFFFF"/><polygon points="34,56 94,56 64,92" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="13" stroke-linejoin="round"/><rect x="27" y="104" width="74" height="12" rx="6" fill="#B8F1F8"/></g></svg> 
+  <div><h1>Quick Video Saver 2.0</h1><p class="lead">Kisi bhi page ka video save karo: files, HLS/DASH streams aur 1000+ sites. Free. Local. No quota.</p></div>
+</header>
+
+<section>
+  <h2><span class="n">1</span> Install (sirf ek baar, 2 minute)</h2>
+  <ol>
+    <li>ZIP par right-click &rarr; <b>Extract All</b>. Folder ko permanent jagah rakhein (jaise <code>D:\Tools\Quick-Video-Saver</code>).</li>
+    <li><b>SETUP-WINDOWS.cmd</b> par double-click karein. Admin access nahi chahiye. Full ZIP me sab tools included hain, internet nahi chahiye.</li>
+    <li>Browser me <code>chrome://extensions</code> (Brave: <code>brave://extensions</code>, Edge: <code>edge://extensions</code>) kholein, <b>Developer mode</b> ON karein, <b>Load unpacked</b> dabayein aur package ka <code>extension</code> folder chunein.</li>
+    <li>Browser <b>restart</b> karein, phir toolbar me puzzle icon &rarr; Quick Video Saver ko <b>pin</b> karein.</li>
+  </ol>
+  <div class="tip"><b>Pehle se install hai?</b> Naya package usi folder me rakhein aur <code>chrome://extensions</code> me extension ke <b>Reload</b> (gol arrow) par click karein. Setup dobara nahi chalana.</div>
+</section>
+
+<section>
+  <h2><span class="n">2</span> Use</h2>
+  <ol>
+    <li>Video wala page kholein aur video <b>play</b> karein.</li>
+    <li>Toolbar icon dabayein (<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>). Card me page ka title, format, resolution, duration aur size dikhta hai.</li>
+    <li>Quality chunein &rarr; <b>Download</b>. Progress usi card me dikhta hai; <b>Downloads</b> tab me sab jobs, speed aur ETA.</li>
+  </ol>
+  <div class="grid">
+    <div><b>Video par Download button</b>Video par mouse le jayein ya play dabayein: top-right corner me <b>Download</b> button aata hai (IDM jaisa). Ek click = best quality; &#9662; se quality ya Audio only. Band karne ke liye Settings &rarr; <i>Button on videos</i>, ya button ke menu me <i>Hide on this site</i>.</div>
+    <div><b>Side panel</b>Popup me sidebar icon, ya <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>. Settings me icon ko hamesha side panel kholne par set kar sakte hain.</div>
+    <div><b>Analyze page</b>Kuch na mile (hidden / blob video) to sparkle button dabayein. Helper page study karke stream dhoondta hai.</div>
+    <div><b>Link paste</b>Neeche box me YouTube, Vimeo, X, Reddit... ya direct stream ka link daalein &rarr; Find.</div>
+    <div><b>Audio only</b>Card ke <b>&bull;&bull;&bull;</b> menu me MP3/M4A. Wahin rename, copy link aur details.</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">3</span> Kya kya apne aap sambhalta hai</h2>
+  <ul>
+    <li><b>Hidden streams</b>: page ke andar fetch/XHR se aane wale m3u8/mpd (bina extension ke bhi) pakadta hai.</li>
+    <li><b>Protected links</b>: Referer, cookies (login), browser identity aur custom headers same site ke liye replay karta hai.</li>
+    <li><b>Retry ladder</b>: fail ho to Chrome-jaisi TLS identity &rarr; page extractor &rarr; FFmpeg direct copy.</li>
+    <li><b>Expire ho gaya link</b>: page ne naya link bheja ho to khud retry; warna &ldquo;Reload page&rdquo; ka button.</li>
+    <li><b>Resume</b>: adhura download wahin se; <b>Live stream</b>: Stop dabane par ab tak ki recording save.</li>
+    <li><b>Fake files</b>: server ne error page diya ho to use video bata kar save nahi karta.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">4</span> Problem?</h2>
+  <details><summary>&ldquo;Helper not installed&rdquo; dikh raha hai</summary><p>SETUP-WINDOWS.cmd chalayein, browser poora band karke dobara kholein, phir extension me Settings &rarr; Helper &rarr; Check again. Folder move kiya ho to setup dobara chalayein.</p></details>
+  <details><summary>Video detect nahi hua</summary><p>Video play karke refresh icon dabayein. Phir sparkle (Analyze page). Extension install ke baad pehle se khule tabs ko reload kar lein.</p></details>
+  <details><summary>403 / &ldquo;link expired&rdquo;</summary><p>Page reload karke video play karein, phir download. Site me login zaroori ho to usi browser me login rakhein (Settings &rarr; Use my browser login ON).</p></details>
+  <details><summary>&ldquo;Unable to extract&rdquo; / site achanak band</summary><p>Settings &rarr; <b>Update downloader</b>. Zyadatar site-changes isi se theek ho jate hain.</p></details>
+  <details><summary>&ldquo;DRM protected&rdquo;</summary><p>Widevine/PlayReady/FairPlay se encrypted streams (Netflix, Prime, premium OTT) save nahi ho sakte. Ye technical limit hai.</p></details>
+  <details><summary>Download folder badalna</summary><p>Settings &rarr; Save to &rarr; Change&hellip;. Adhoori files us folder ke hidden <code>.partial</code> me rehti hain.</p></details>
+  <details><summary>Hatana (uninstall)</summary><p>Browser se extension remove karein, <b>UNINSTALL-HELPER.cmd</b> chalayein. Downloaded videos wahin rehte hain.</p></details>
+</section>
+
+<p class="muted">Use only for videos you own or are allowed to save. No analytics, no server: sab kuch aapke PC par. Independent software; not affiliated with Video DownloadHelper. Tools: yt-dlp, FFmpeg, Deno (see THIRD-PARTY-NOTICES.txt).</p>
+</main>
+</body>
+</html>

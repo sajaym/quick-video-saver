@@ -1,0 +1,51 @@
+Validation of Quick Video Saver 2.0.0 - Windows 11, 2026-10-23
+
+AUTOMATED (all green)
+ PASS  Strict syntax check of every extension script (ES modules + classic content scripts).
+ PASS  31 Node tests: URL and media classification (segments vs real files, ads, byte ranges),
+       HLS / DASH / Smooth manifests (variants, duration, size, DRM, live), page-title cleaning,
+       tab-state merging, grouping of cards (duplicates, secondary sources, best match).
+ PASS  39 Python tests of the helper through the real native-messaging protocol, with the bundled
+       Python, yt-dlp, FFmpeg and Deno against a local web server that behaves like awkward sites:
+       hotlink protection (Referer), cookie gates, custom auth headers, AES-128 and disguised (.jpg)
+       HLS segments, DASH audio+video merge, quality selection from master playlists, fake "video"
+       files, expired links falling back to the page extractor, FFmpeg direct-copy fallback,
+       pause / resume / cancel with partial-file cleanup, queue limits, duplicate protection,
+       live HLS "stop and save", disk-space guard, unsafe-request rejection, % and Unicode in titles.
+ PASS  38 browser end-to-end tests (real extension + real helper + fixture websites), run against
+       THIS unpacked package in Chrome 155 (the real browser, using the helper registered by
+       SETUP-WINDOWS.cmd) and in Chromium 140. Covered: MP4, HLS via hls.js (blob video), playlists
+       without file extension, URLs hidden in JSON, iframes, DASH via dash.js, Referer-protected
+       playlists, single-page navigation, DRM notice, embeds, quality choice, custom file names,
+       audio only, members-only encrypted HLS (cookie + custom X-Auth header + Referer for playlist,
+       key and segments), pause/resume, service-worker restart mid-download, outdated-helper
+       detection, popup UI, settings, side-panel wiring, privilege checks, no uncaught exceptions,
+       and the on-page Download button (appears top-right on hover, one-click save, quality menu,
+       off switch, per-site hiding; clicked with real mouse events through the debugger).
+ PASS  Smoke subset (MP4, HLS detection, HLS download, popup) in Brave 156 and Edge 155.
+ PASS  Full ZIP setup (-PrepareOnly) and Lite ZIP setup with cached downloads (-PrepareOnly).
+
+MANUAL, REAL WEBSITES (internet needed; checked with the real browser)
+ hls.js demo + Mux test stream (5 qualities with sizes), w3schools MP4, archive.org (page analysis
+ + files), TED (8 qualities), Wikimedia Commons, YouTube (page analysis, 144p-2160p with sizes),
+ Vimeo embedded player (page analysis; its HLS twin is demoted to "other sources").
+
+NOT VERIFIED
+ - DRM-protected streams (cannot be saved by design).
+ - Sites that need a login or hide the stream inside page scripts that decrypt it themselves.
+ - The side panel was verified through its API wiring and layouts at side-panel sizes; a visible
+   side panel cannot be opened in a headless browser.
+ - Windows 10 and non-ASCII Windows user names. Tests use local generated media and a few public
+   sites; they do not prove support for every website.
+
+REPRODUCE (from the developer workspace)
+  node --experimental-vm-modules qvs-tools/check-syntax.mjs
+  node --test qvs-tests/core.test.mjs qvs-tests/model.test.mjs
+  python -I qvs-tests/test_helper.py
+  node qvs-tests/browser.test.mjs                  (Chromium; QVS_PACKAGE=dist for this package)
+  QVS_BROWSER=chrome QVS_PACKAGE=dist node qvs-tests/browser.test.mjs
+  powershell -NoProfile -ExecutionPolicy Bypass -File Quick-Video-Saver/setup.ps1 -PrepareOnly
+  python qvs-tools/build.py
+
+Tests write only to the workspace test folder. A temporary Chromium native-host registry key is
+created for the Chromium runs and removed afterwards; your own registration is never changed.

@@ -1,0 +1,40 @@
+Quick Video Saver contains original extension and helper source code.
+It is not affiliated with Video DownloadHelper or any website it can read.
+
+Portable dependencies (full package only; downloaded by lite setup):
+
+yt-dlp: https://github.com/yt-dlp/yt-dlp
+Source license: Unlicense. Packaged executable includes components with
+their own licenses. See helper/runtime/YTDLP-LICENSE.txt and
+helper/runtime/YTDLP-THIRD-PARTY.txt.
+
+FFmpeg: https://ffmpeg.org/
+Builds: https://github.com/yt-dlp/FFmpeg-Builds
+This package uses the GPL shared Windows build. The upstream license file
+and the DLLs are retained in helper/runtime/ffmpeg (documentation, headers
+and ffplay are left out to keep the package small).
+Source: https://github.com/FFmpeg/FFmpeg
+Included build: N-127943-g2668cb6e31, from commit 2668cb6e31.
+Corresponding FFmpeg source: https://github.com/FFmpeg/FFmpeg/tree/2668cb6e31
+Build recipes and patches: https://github.com/yt-dlp/FFmpeg-Builds
+Exact downloaded build URL, version and archive SHA-256: helper/sources.json.
+Personal local-use bundle; consult dependency licenses before redistribution.
+
+Deno: https://github.com/denoland/deno (MIT and third-party licenses)
+See helper/runtime/DENO-LICENSE.txt.
+
+Lucide icons: https://lucide.dev (ISC License, Copyright (c) Lucide Contributors; portions
+Copyright (c) Cole Bemis 2013-2022 as part of Feather, MIT). The icon paths are inlined in
+extension/ui/icons.js.
+
+Google Sans: https://fonts.google.com/specimen/Google+Sans (Copyright Google LLC, SIL Open Font License 1.1,
+https://openfontlicense.org). The variable font files are bundled in extension/fonts/ so the interface looks the
+same offline. The design uses no third-party logos or artwork.
+
+CPython: https://www.python.org/ (Python Software Foundation License)
+See helper/runtime/python/LICENSE.txt.
+
+Tools are fetched from their upstream HTTPS release endpoints. Downloads
+are verified against helper/sources.json. GitHub asset digests are checked
+when preparing the full bundle. Setup does not install Python globally,
+alter PATH, install a Windows service, or run a local web server.

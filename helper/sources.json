@@ -1,0 +1,32 @@
+{
+  "tools": {
+    "python": {
+      "name": "python-3.14.8-embed-amd64.zip",
+      "url": "https://www.python.org/ftp/python/3.14.8/python-3.14.8-embed-amd64.zip",
+      "version": "3.14.8",
+      "sha256": "a93abe456ab01bd96d7a085b3cdb6566b3063f4241360d114142fbdb07f0a310",
+      "source": "https://www.python.org/downloads/release/python-3148/"
+    },
+    "ytdlp": {
+      "name": "yt-dlp.exe",
+      "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp.exe",
+      "version": "2026.10.21",
+      "sha256": "33121d192d706e62f684a06f80918e3f3a8ba52ac3a65213b6951c39c7d9f555",
+      "source": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.10.21"
+    },
+    "ffmpeg": {
+      "name": "ffmpeg-N-127943-g2668cb6e31-win64-gpl-shared.zip",
+      "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2026-10-22-18-33/ffmpeg-N-127943-g2668cb6e31-win64-gpl-shared.zip",
+      "version": "autobuild-2026-10-22-18-33",
+      "sha256": "e8186d13862dd1143b78ff093252720329bc5a15ff10a6af8dbf3f03584fed4a",
+      "source": "https://github.com/yt-dlp/FFmpeg-Builds/releases/tag/autobuild-2026-10-22-18-33"
+    },
+    "deno": {
+      "name": "deno-x86_64-pc-windows-msvc.zip",
+      "url": "https://github.com/denoland/deno/releases/download/v2.9.8/deno-x86_64-pc-windows-msvc.zip",
+      "version": "v2.9.8",
+      "sha256": "cba84b26e0df5ae7f74fc66b86a95b866872a86292ebd84fa1e959927edd93bf",
+      "source": "https://github.com/denoland/deno/releases/tag/v2.9.8"
+    }
+  }
+}

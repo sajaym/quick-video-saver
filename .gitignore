@@ -1,0 +1,13 @@
+# Downloaded at setup time, never commit
+helper/runtime/
+helper/setup-cache/
+helper/__pycache__/
+# Written by setup.ps1 with a path on the user's own PC
+helper/com.quick_video_saver.local.json
+*.pyc
+*.part
+*.partial
+.qvs-*/
+dist/
+Thumbs.db
+desktop.ini
