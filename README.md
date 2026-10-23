@@ -254,7 +254,7 @@ Not yet; the setup and runtime are Windows-only.
 There is no build step: the extension is plain ES-module JavaScript.
 
 ```
-git clone https://github.com/<your-username>/quick-video-saver.git
+git clone https://github.com/sajaym/quick-video-saver.git
 cd quick-video-saver
 SETUP-WINDOWS.cmd        # installs helper runtime and registers it
 # then Load unpacked -> extension/
